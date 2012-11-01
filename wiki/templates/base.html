@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wiki</title>
+	<link type="text/css" rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+	<div class="header">
+		<span class="header-article">
+		{% if article %}
+			<a href="/edit{{article.name | safe}}">edit</a> |
+			<a href="/history{{article.name | safe}}">history</a>
+		{% endif %}
+		</span>
+
+		<span class="header-user">
+		{% if user %}
+			{{user.username | safe}} (<a href="/logout">logout</a>)
+		{% endif %}
+
+		{% if not user %}
+			<a href="/signup">signup</a> |
+			<a href="/login">login</a>
+		{% endif %}
+		</span>
+	</div>
+	
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="history">
+	{% for article in articles %}
+
+		<div class="article-history">
+
+			<div class="article-history-date">
+				{{article.created.strftime("%c")}}
+			</div>
+
+			<div class="article-history-content">
+				{{article.content}}
+			</div>
+
+			<div class="article-history-links">
+				<a href="{{article.name | safe}}?v={{article.key().id()}}">view</a>
+				<a href="/edit{{article.name | safe}}?v={{article.key().id()}}">edit</a>
+			</div>
+
+		</div>
+
+	{% endfor %}
+	</div>
+{% endblock %}
