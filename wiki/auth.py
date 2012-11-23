@@ -1,6 +1,6 @@
 from handlers import Handler
 from DB.user import User
-from utils import hasSpace, make_salt, make_pw_hash, valid_pw
+from utils import hasSpace, make_salt, make_pw_hash, valid_pw, validEmail
 
 class Login(Handler):
 	def get(self):

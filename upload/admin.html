@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>352 Media Group Competition</title>
+</head>
+<body>
+	<body>
+		{% for file in files %}
+			<div class="file">
+				Name: {{file.uname}} <br/>
+				Address: {{file.address}} <br/>
+				Email: {{file.email}} <br/>
+				Description: {{file.description}} <br/>
+				Submitted at: {{file.created.strftime("%c")}} <br/>
+				File name: {{file.fileName}} <br/>
+			</div>
+			<hr/>
+		{% endfor %}
+	</body>
+		
+</body>
+</html>

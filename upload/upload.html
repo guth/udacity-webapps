@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>352 Media Group Competition</title>
+	<script type="text/javascript">
+		var upload = function()
+		{
+			// This doesn't work. I've never used JavaScript :(
+
+		    var fileName = document.getElementById("fileName");
+    		var file = fileName.files[0];
+
+    		contentArea = document.getElementById("fileContents")
+    		contentArea.value = "foo"
+		};
+	</script>
+</head>
+<body>
+	<body>
+		<h2>Upload</h2>
+		<form method="post" enctype="multipart/form-data">
+			<label>
+				File
+				<input type="file" name="fileName"/>
+			</label>
+			<br/>
+			<label>
+				Name
+				<input type="text" name="uname" value="uname" />
+			</label>
+			<br/>
+			<label>
+				Address
+				<input type="text" name="address" value="address" />
+			</label>
+			<br/>
+			<label>
+				Email
+				<input type="text" name="email" value="email" />
+			</label>
+			<br/>
+			<label>
+				Description
+				<textarea name="description">description</textarea>
+			</label>
+			<br/>
+			<input type="submit" />
+		</form>
+		<span style="color: red;">{{error}}</span>
+</body>
+</html>
